@@ -51,12 +51,19 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am an Anime themed group management bot. I will use my angel Zafkiel and protect your group. You can find my list of available commands with /help.
+Hi {https://telegra.ph/file/036b765b6ec69b6eaa68b.mp4}, my name is {VALT AOI}! 
+
+I ᴀᴍ ᴀɴ Cᴀʀᴛᴏᴏɴ Tʜᴇᴍᴇᴅ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ.
+
+Mᴀɴᴀɢᴇᴅ ʙʏ Pɪɢᴀsᴜs Uᴘᴅᴀᴛᴇs ғᴏʀ Yᴏᴜʀ Tᴇʟᴇɢʀᴀᴍ Gʀᴏᴜᴘ
+
+Jᴏɪɴ @PigasusUpdates & @PigasusSupport
+
+. You can find my list of available commands with /help.
 """
 
 HELP_STRINGS = """
-KURUMI is here! 
+VALT AOi is here! 
 I Use My Powers To Help Admins To Manage Their Groups! 
 *Main* commands available :
  • /help: PM's you this message.
@@ -64,16 +71,16 @@ I Use My Powers To Help Admins To Manage Their Groups!
  • /settings:
    • in PM: will send you your settings for all supported modules.
    • in a group: will redirect you to pm, with all that chat's settings.
-For all command use / [or](https://telegra.ph/file/b1b545eb4877b012eac82.png) ! 
+For all command use / [or](https://telegra.ph/file/bdbdaf8c4bd120f3d5877.jpg) ! 
 """.format(
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\nKindly use ! for commands if / is not working\n")
 
-TOKISAKI_IMG = "https://telegra.ph/file/99bbcc3b8564804dc2ab0.jpg"
-KURUMI_IMG = "https://telegra.ph/file/e1d87ec2bdac4e3cfe0a4.mp4"
+TOKISAKI_IMG = "https://telegra.ph/file/bdbdaf8c4bd120f3d5877.jpg"
+KURUMI_IMG = "https://telegra.ph/file/036b765b6ec69b6eaa68b.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-Click here to donate in [Paypal](https://www.paypal.me/zameeljaz)"""
+Click here to donate in [Paypal](@Rohith_No_1)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -191,27 +198,27 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="☑️ Add Kurumi Chan to your group",
-                            url="t.me/{}?startgroup=true".format(
+                            text="☑️ ADD VALT AOI TO YOUR GROUP",
+                            url="t.me/valtaoibladerbot?startgroup=true".format(
                                 context.bot.username))
                     ],
                      [
                          InlineKeyboardButton(
-                             text="🚨 Support 🚨",
-                             url=f"https://t.me/{SUPPORT_CHAT}"),
+                             text="🚨 SUPPORT 🚨",
+                             url=f"https://t.me/PigasusSupport"),
                          InlineKeyboardButton(
-                             text="My luv ❤",
-                             url="https://t.me/A_lonelyPerson")
+                             text="CHECK MY FRIEND ❤",
+                             url="http://t.me/ShuKurenaithebot")
                     ], 
                      [
                          InlineKeyboardButton(
-                             text="🔔 Updates of KURUMI 🔔",
-                             url="https://t.me/hiroiscool")
+                             text="🔔 UPDATE OF VALT AOI🔔",
+                             url="https://t.me/PigasusUpdates")
                     ], 
                      [
                          InlineKeyboardButton(
-                             text="📳 Anime Chat Group 📳",
-                             url="https://t.me/WeebXWorld")
+                             text="BOT OWNER ",
+                             url="https://t.me/Rohith_no_1")
                     ]]))
                      
                     
@@ -219,7 +226,7 @@ def start(update: Update, context: CallbackContext):
                     
     else:
         update.effective_message.reply_video(
-                KURUMI_IMG, caption=f"Zaphkiel!!!!\nI'm here with my Zaphkiel")
+                KURUMI_IMG, caption=f"I AM ONLINE NOW ")
 
 # for test purposes
 def error_callback(update: Update, context: CallbackContext):
@@ -534,7 +541,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[My Zaphkiel won't let me die!](https://telegra.ph/file/b069f7fbe7eecdb56c36c.mp4)", parse_mode=ParseMode.MARKDOWN) 
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[VALT AOI won't let me die!](https://telegra.ph/file/036b765b6ec69b6eaa68b.mp4)", parse_mode=ParseMode.MARKDOWN) 
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!")
