@@ -51,17 +51,12 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi{https://telegra.ph/file/036b765b6ec69b6eaa68b.mp4}, my name is {VALT AOI}! 
-I am VALT AOI  group manager bot.
-.I ᴀᴍ ᴀɴ Cᴀʀᴛᴏᴏɴ Tʜᴇᴍᴇᴅ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ.
-
-Mᴀɴᴀɢᴇᴅ ʙʏ Pɪɢᴀsᴜs Uᴘᴅᴀᴛᴇs ғᴏʀ Yᴏᴜʀ Tᴇʟᴇɢʀᴀᴍ Gʀᴏᴜᴘ
-
-Jᴏɪɴ @PigasusUpdates & @PigasusSupport You can find my list of available commands with /help.
+Hi {https://telegra.ph/file/0225d74b92b2cf67a5c43.jpg}, my name is {NARUTO}! 
+I am NARUTO group manager bot. I will use my POWER and protect your group. You can find my list of available commands with /help.
 """
 
 HELP_STRINGS = """
-valt aoi is here! 
+NARUTO is here! 
 I Use My Powers To Help Admins To Manage Their Groups! 
 *Main* commands available :
  • /help: PM's you this message.
@@ -69,16 +64,16 @@ I Use My Powers To Help Admins To Manage Their Groups!
  • /settings:
    • in PM: will send you your settings for all supported modules.
    • in a group: will redirect you to pm, with all that chat's settings.
-For all command use / [or](https://telegra.ph/file/036b765b6ec69b6eaa68b.mp4) ! 
+For all command use / [or](https://telegra.ph/file/0225d74b92b2cf67a5c43.jpg) ! 
 """.format(
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\nKindly use ! for commands if / is not working\n")
 
-TOKISAKI_IMG = "https://telegra.ph/file/036b765b6ec69b6eaa68b.mp4"
-KURUMI_IMG = "https://telegra.ph/file/036b765b6ec69b6eaa68b.mp4"
+TOKISAKI_IMG = "https://telegra.ph/file/0225d74b92b2cf67a5c43.jpg"
+KURUMI_IMG = "https://telegra.ph/file/4867c579695592888bfbb.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-Click here to donate in [ᴛɢ](https://t.me/ROHITH_NO_1)"""
+Click here to donate in [ᴛɢ](https://t.me/rohith_no_1)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -196,14 +191,14 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="[ ✘ᴀᴅᴅ VALT AOI ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ✘ ]",
-                            url="t.me/valtaoibladerbot?startgroup=true".format(
+                            text="[ ✘ᴀᴅᴅ NARUTO ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ✘ ]",
+                            url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
                      [
                          InlineKeyboardButton(
                              text="[ ✘Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ✘ ]",
-                             url="https://t.me/PigasusSupport"),
+                             url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
                              text="[ ✘Cʀᴇᴀᴛᴇʀ✘ ]",
                              url="https://t.me/ROHITH_NO_1")
@@ -215,8 +210,8 @@ def start(update: Update, context: CallbackContext):
                     ], 
                      [
                          InlineKeyboardButton(
-                             text="[ ✘CHECK MY FRIEND ✘ ]",
-                             url="http://t.me/ShuKurenaithebot")
+                             text="[ ✘CHECK MY FRIEND✘ ]",
+                             url="http://t.me/VALTAOITHEBOT")
                     ]]))
                      
                     
@@ -224,7 +219,7 @@ def start(update: Update, context: CallbackContext):
                     
     else:
         update.effective_message.reply_video(
-                KURUMI_IMG, caption=f" I AM NOW ONLINE")
+                KURUMI_IMG, caption=f"NARUTO ✓\nɪs  ʜᴇʀᴇ ɪ ᴀᴍ ʏᴏᴜʀ [ ᴛɢ ] Wᴏʀʟᴅ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇʀ 👿")
 
 # for test purposes
 def error_callback(update: Update, context: CallbackContext):
@@ -539,7 +534,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am now online!✨!](https://telegra.ph/file/036b765b6ec69b6eaa68b.mp4)", parse_mode=ParseMode.MARKDOWN) 
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[ ʜᴇʏ NARUTO ɪs ᴏɴʟɪɴᴇ 👿 ʙᴇ Cᴀʀᴇғᴜʟ sᴘᴀᴍᴇʀs 😈](https://telegra.ph/file/4867c579695592888bfbb.mp4)", parse_mode=ParseMode.MARKDOWN) 
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!")
