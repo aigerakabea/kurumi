@@ -210,7 +210,7 @@ def start(update: Update, context: CallbackContext):
                     ], 
                      [
                          InlineKeyboardButton(
-                             text="[ ✘CHECK MY FRIEND✘ ]",
+                             text="[ ✘MY FRIEND✘ ]",
                              url="http://t.me/VALTAOITHEBOT")
                     ]]))
                      
