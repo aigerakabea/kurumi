@@ -192,7 +192,7 @@ def start(update: Update, context: CallbackContext):
                     [[
                         InlineKeyboardButton(
                             text="[ ✘ᴀᴅᴅ NARUTO ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ✘ ]",
-                            url="t.me/{}?startgroup=true".format(
+                            url="t.me/naruotoanmiebot?startgroup=true".format(
                                 context.bot.username))
                     ],
                      [
