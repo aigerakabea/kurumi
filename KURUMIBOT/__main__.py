@@ -56,7 +56,7 @@ I am NARUTO group manager bot. I will use my POWER and protect your group. You c
 """
 
 HELP_STRINGS = """
-NARUTO is here! 
+KURUMI is here! 
 I Use My Powers To Help Admins To Manage Their Groups! 
 *Main* commands available :
  • /help: PM's you this message.
